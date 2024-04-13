@@ -2,7 +2,7 @@
 server_port = 7000
 server_addr = server.tinymation.com
 log_file = /share/frpc.log
-log_level = info
+log_level = debug
 log_max_days = 3
 [http_020007a29b47]
 type = http
