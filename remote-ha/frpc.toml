@@ -1,11 +1,21 @@
-[common]
-server_port = 7000
-server_addr = server.tinymation.com
-[http_020007a29b47]
-type = http
-local_ip = 127.0.0.1
-local_port = 8123
-subdomain = 001c1
+
+serverAddr = "server.tinymation.com"
+serverPort = 7000
+
+log.to = "/share/frpc.log"
+# trace, debug, info, warn, error
+log.level = "trace"
+log.maxDays = 3
+
+
+
+[[proxies]]
+name = "http_020007a29b47"
+type = "http"
+customDomains = ["001c1"]
+transport.useEncryption = true
+transport.useCompression = true
+localPort = 8123
+localIP = "127.0.0.1"
 meta_auth_valid_to = 1924905600000
 meta_auth_key = de101b22-df7f-4671-9fe4-c052a22042e6
-use_gzip = true
