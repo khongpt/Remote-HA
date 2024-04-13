@@ -42,12 +42,12 @@ sed -i "s/020007a29b47/$uci_mac_lower/" $CONFIG_PATH
 sed -i "s/001c1/$subdomain/" $CONFIG_PATH
 sed -i "s/1924905600000/$uci_time/" $CONFIG_PATH
 sed -i "s/de101b22-df7f-4671-9fe4-c052a22042e6/$uci_key/" $CONFIG_PATH
-bashio::log.info "Starting tunnel"
-cat $CONFIG_PATH
+#bashio::log.info "Starting tunnel"
+#cat $CONFIG_PATH
 cd /usr/src
 ./frpc -c $CONFIG_PATH & WAIT_PIDS+=($!)
 
-tail -f /share/frpc.log &
+#tail -f /share/frpc.log &
 
 trap "stop_frpc" SIGTERM SIGHUP
 wait "${WAIT_PIDS[@]}"
