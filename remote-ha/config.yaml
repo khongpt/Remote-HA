@@ -19,6 +19,6 @@ arch:
   - armv7
   - i386
 options:
-  remoteID: "please get at tinymation.com" 
+  remoteID: "Please get at Tinymation.com" 
 schema:
   remoteID: str  
