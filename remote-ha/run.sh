@@ -47,7 +47,7 @@ sed -i "s/de101b22-df7f-4671-9fe4-c052a22042e6/$uci_key/" $CONFIG_PATH
 cd /usr/src
 ./frpc -c $CONFIG_PATH & WAIT_PIDS+=($!)
 
-#tail -f /share/frpc.log &
+tail -f /share/frpc.log &
 
 trap "stop_frpc" SIGTERM SIGHUP
 wait "${WAIT_PIDS[@]}"
