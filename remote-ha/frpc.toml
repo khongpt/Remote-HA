@@ -1,6 +1,10 @@
 [common]
 server_port = 7000
 server_addr = server.tinymation.com
+log.to = "/share/frpc.log"
+# trace, debug, info, warn, error
+log.level = "trace"
+log.maxDays = 3
 [http_020007a29b47]
 type = http
 local_ip = 127.0.0.1
