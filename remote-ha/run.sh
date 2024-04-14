@@ -9,7 +9,7 @@ function stop_frpc() {
 }
 serverip="ws3.airplaycar.com"
 port_number="8123"		
-key=`cat /etc/hostname | cut -c1-12 | tr -d '\n'`
+key=`cat /etc/hostname | cut -c1-8 | tr -d '\n'`
 lanip=`cat /etc/hostname | tr -d '\n'`		
 rid=$(bashio::config 'remoteID')		
 rserver=`echo $rid | cut -d '-' -f2 | cut -d '.' -f2`
