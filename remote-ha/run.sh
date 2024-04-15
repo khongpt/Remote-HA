@@ -17,8 +17,6 @@ fi
 lanip=`cat /etc/hostname | tr -d '\n'`		
 rid=$(bashio::config 'remoteID')		
 rserver=`echo $rid | cut -d '-' -f2 | cut -d '.' -f2`
-cat /sys/class/net/docker0/address > /share/docker0
-cat /sys/class/net/hassio0/address > /share/hassio0
 case "$rserver" in
    "hass") serverip="ws5.airplaycar.com" 
    ;;
