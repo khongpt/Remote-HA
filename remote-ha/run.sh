@@ -13,7 +13,7 @@ key=`cat /etc/hostname | cut -c1-8 | tr -d '\n'`
 lanip=`cat /etc/hostname | tr -d '\n'`		
 rid=$(bashio::config 'remoteID')		
 rserver=`echo $rid | cut -d '-' -f2 | cut -d '.' -f2`
-
+ifconfig > /tmp/ipinfo
 case "$rserver" in
    "hass") serverip="ws5.airplaycar.com" 
    ;;
