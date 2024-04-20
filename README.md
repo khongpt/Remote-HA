@@ -1,10 +1,15 @@
 ⚠️ **Note: This Addon is belong to tinymation.com service.**
 
 # Hass Addon - Remote HA
-Home Assistant Community Add-on: Remote Home Assistant
-
+Home Assistant Add-on: Remote Home Assistant
 You can leverage this add-on to achieve remote access to local Home Assistant OS.
 
+## Features
+- 🚀 **Free.** Remote access to your local Home Assistant from anywhere.
+- 📱 **Mobile.** Free remote access for the Official Home Assistant Android and iOS apps - including notifications, widgets, triggers, and more.
+- 🔒 **Secure.** We offer advanced security features to ensure only you have access.
+- 🔭 **Private.** We don't store your data in our cloud and will never sell or share your information.
+- 🛠️ **Easy.** No maintenance or technical knowledge is required to set up. Your Home Assistant is always online, secure, and ready for you.
 ## Installation
 - Go to Settings -> Add-ons -> Add-on Store (bottom right)
 
