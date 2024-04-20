@@ -1,7 +1,7 @@
 ⚠️ **Note: This Addon is belong to tinymation.com service.**
 
-# Hass Addon - Remote HA
-Home Assistant Add-on: Remote Home Assistant
+# Home Assistant Add-on - Remote HA
+
 You can leverage this add-on to achieve remote access to local Home Assistant OS. Your Home Assistant is always online, secure, and ready for you!
 
 ## Features
