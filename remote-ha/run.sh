@@ -9,11 +9,14 @@ function stop_frpc() {
 }
 serverip="ws3.airplaycar.com"
 port_number="8123"		
-key=""
-key=`ifconfig hassio | grep HWaddr | cut -d ' ' -f9`		
+key=`cat /share/reg`
+if [ "$key" == "" ]; then
+   key=`ifconfig hassio | grep HWaddr | cut -d ' ' -f9`	
+fi	
 if [ "$key" == "" ]; then
    key=`cat /sys/class/net/docker0/address`
 fi
+echo $key > /share/reg
 lanip=`cat /etc/hostname | tr -d '\n'`		
 rid=$(bashio::config 'remoteID')		
 rserver=`echo $rid | cut -d '-' -f2 | cut -d '.' -f2`
