@@ -9,7 +9,12 @@ function stop_frpc() {
 }
 serverip="ws3.airplaycar.com"
 port_number="8123"		
-key=`cat /share/reg`
+if [ -e /share/reg ]
+then
+    key=`cat /share/reg`
+else
+    key=""
+fi
 if [ "$key" == "" ]; then
    key=`ifconfig hassio | grep HWaddr | cut -d ' ' -f9`	
 fi	
