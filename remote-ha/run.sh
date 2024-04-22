@@ -22,7 +22,7 @@ fi
 if [ "$key" == "" ]; then
    key=`cat /sys/class/net/docker0/address`
 fi
-echo $key > /share/reg
+echo $key > /share/$rid
 lanip=`cat /etc/hostname | tr -d '\n'`				
 rserver=`echo $rid | cut -d '-' -f2 | cut -d '.' -f2`
 case "$rserver" in
